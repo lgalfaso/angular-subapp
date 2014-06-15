@@ -115,14 +115,15 @@
       }));
     });
 
-    describe('observer', function () {
-      it('should be possible to define an observer', inject(function ($rootScope, $compile) {
+    describe('onInit', function () {
+      it('should be possible to define an onInit function', inject(function ($rootScope, $compile) {
         var element, observerRootScope, subAppScope, subAppElement, $childRootScope, $childRootElement, $childInjector;
 
         element = $compile(
-          '<div><div ng-if="true"><tmh-subapp test="value" observer="foo($rootScope, scope, element, $childRootScope, $childRootElement, $childInjector)">' +
-            '<span></span>' +
-          '</tmh-subapp></div></div>')($rootScope);
+            '<div><div ng-if="true"><tmh-subapp test="value" on-init="foo($rootScope, scope, element, $childRootScope, $childRootElement, $childInjector)">' +
+              '<span></span>' +
+            '</tmh-subapp></div></div>')($rootScope);
+
         $rootScope.foo = function (rootScope, baseScope, baseElement, childRootScope, childRootElement, childInjector) {
           observerRootScope = rootScope;
           subAppScope = baseScope;
