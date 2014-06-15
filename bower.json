@@ -1,0 +1,11 @@
+{
+  "author": "Lucas Galfaso",
+  "name": "angular-subapp",
+  "main": "src/tmhSubapp.js",
+  "description": "Angular Subapp",
+  "version": "0.1.0",
+  "devDependencies": {
+    "angular": "1.2.18",
+    "angular-mocks": "1.2.18"
+  }
+}
