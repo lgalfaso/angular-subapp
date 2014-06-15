@@ -1,6 +1,6 @@
 {
   "name": "angular-subapp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A module that allows angular apps run inside another angular app",
   "license": "MIT License, http://www.opensource.org/licenses/MIT",
   "devDependencies": {
